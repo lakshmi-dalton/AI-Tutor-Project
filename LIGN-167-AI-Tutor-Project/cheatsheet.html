@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cheat Sheet Generator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8eff1;
+            color: #333333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        /* New Styles for Form Elements */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .number-input {
+            width: 10%;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .checkbox-group label {
+            margin-left: 5px;
+        }
+
+        #feedback-form {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        #feedback-form label, #feedback-form textarea, #feedback-form button {
+            width: 100%;
+        }
+        #cheatsheet-result {
+            white-space: pre-wrap; /* Ensure that whitespace and line breaks are respected */
+        }
+    </style>
+</head>
+</head>
+<body>
+    <h1>Cheat Sheet Generator</h1>
+    
+    <div>
+        <label for="num-pages">Number of Pages:</label>
+        <input type="number" id="num-pages" name="numPages" min = "1" class = "number-input">
+    </div>
+
+    <div>
+        <input type="checkbox" id="supervised-learning" name="topic">
+        <label for="supervised-learning">Supervised Learning</label>
+    </div>
+        <input type="checkbox" id="linear-regression" name="topic">
+        <label for="linear-regression">Linear Regression</label>
+    </div>
+        <input type="checkbox" id="logistic-regression" name="topic">
+        <label for="logistic-regression">Logistic Regression</label>
+    <div>
+        <input type="checkbox" id="gradient-descent" name="topic">
+        <label for="gradient-descent">Gradient Descent</label>
+    <div>
+        <input type="checkbox" id="optimization-through-gradient-descent" name="topic">
+        <label for="optimization-through-gradient-descent">Optimization through Gradient Descent</label>
+    <div>
+        <input type="checkbox" id="deep-learning-using-Pytorch" name="topic">
+        <label for="deep-learning-using-Pytorch">Deep Learning using Pytorch</label> 
+    <div>
+        <input type="checkbox" id="mlp" name="topic">
+        <label for="mlp">MLP</label>      
+    <div>
+        <input type="checkbox" id="backpropagation" name="topic">
+        <label for="backpropagation">Backpropagation</label>   
+    <div>
+        <input type="checkbox" id="autoregressive-models" name="topic">
+        <label for="autoregressive-models">Autoregressive Models</label> 
+    <div>
+        <input type="checkbox" id="autoregressive-langueage-modeling" name="topic">
+        <label for="autoregressive-langueage-modeling">Autoregressive Langueage Modeling</label> 
+    <div>
+        <input type="checkbox" id="transformers" name="topic">
+        <label for="transformers">Transformers</label>
+    <div>
+        <input type="checkbox" id="attention-in-transformers" name="topic">
+        <label for="attention-in-transformers">Attention in Transformers</label>
+    <div>
+        <input type="checkbox" id="masked-language-modeling" name="topic">
+        <label for="masked-language-modeling">Masked Language Modeling</label>   
+    <div>
+        <input type="checkbox" id="the-future-of-language-modeling" name="topic">
+        <label for="the-future-of-language-modeling">The Future of Language Modeling</label>           
+    
+    </div>
+
+    <button id="generate-cheatsheet" class = "button">Generate Cheat Sheet</button>
+    <button id="download-button" class = "button">Download PDF</button>
+
+    <div id="cheatsheet-status"></div>
+    <div id="cheatsheet-result"></div>
+    <div id="cheatsheet-title" ></div>
+
+    <!-- Feedback Form -->
+    <form id="feedback-form" style="display:none;">
+        <label for="feedback-input">Provide feedback to improve the cheatsheet:</label>
+        <textarea id="feedback-input"></textarea>
+        <button type="submit" class = "button">Submit Feedback</button>
+        <div id ="feedback-status"></div><!-- Status message will be displayed here -->
+    </form>
+
+    <script src="cheat_sheet_generator.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>
